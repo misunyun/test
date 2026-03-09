@@ -1,14 +1,364 @@
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="kr">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon_144x144.png">
-	<title></title>
-	<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=high-dpi">
+<title>[MC]</title>
+<script src="http://static2.e-himart.co.kr/resources/layout/js/jquery-1.11.2.min.js"></script>
+<script src="http://static2.e-himart.co.kr/resources/layout/js/jquery.easing.1.3.js"></script>
+<script src="http://mstatic2tst.e-himart.co.kr/resources/layout/js/iScroll.js"></script>
+<script src="http://mstatic2tst.e-himart.co.kr/resources/layout/js/display.js"></script>
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/common.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/base.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/layout.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/common.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic2.e-himart.co.kr/resources/layout/css/member.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/jquery-ui.min.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic2.e-himart.co.kr/resources/layout/css/layerpop.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/order.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic2.e-himart.co.kr/resources/layout/css/display.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/event.css" />
+<link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/mypage.css" />
+
+<!-- D:style -->
+<style type="text/css">
+.hiEvent-M-1257 {position:relative;}
+.hiEvent-M-1257 img {width:100%; vertical-align:top;}
+.hiEvent-M-1257 .inner {position:relative;}
+.hiEvent-M-1257 #circle {position:absolute; top:37%; left:10%; width:80%; height:auto;}
+.hiEvent-M-1257 .circleArr {position:absolute; top:32.5%; left:50%; margin-left:-8%; width:16%;}
+.hiEvent-M-1257 .circleStart {position:absolute; top:55%; left:50%; margin-left:-14%; width:28%; height:20%;}
+.hiEvent-M-1257 .btn_view {position:absolute; right:3%; bottom:3%; width:27.5%; height:4.2%;}
+.hiEvent-M-1257 #circle.spin1{
+	animation: spin1 3s ease-out;
+	-webkit-animation: spin1 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.hiEvent-M-1257 #circle.spin2{
+	animation: spin2 3s ease-out;
+	-webkit-animation: spin2 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.hiEvent-M-1257 #circle.spin3{
+	animation: spin3 3s ease-out;
+	-webkit-animation: spin3 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.hiEvent-M-1257 #circle.spin4{
+	animation: spin4 3s ease-out;
+	-webkit-animation: spin4 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.hiEvent-M-1257 #circle.spin5{
+	animation: spin5 3s ease-out;
+	-webkit-animation: spin5 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+@keyframes spin1 {
+  to { transform: rotate(1700deg); }
+}
+@-webkit-keyframes spin1 {
+  to { -webkit-transform: rotate(1700deg); }
+}
+@keyframes spin2 {
+  to { transform: rotate(1900deg); }
+}
+@-webkit-keyframes spin2 {
+  to { -webkit-transform: rotate(1900deg); }
+}
+@keyframes spin3 {
+  to { transform: rotate(2120deg); }
+}
+@-webkit-keyframes spin3 {
+  to { -webkit-transform: rotate(2120deg); }
+}
+@keyframes spin4 {
+  to { transform: rotate(1620deg); }
+}
+@-webkit-keyframes spin4 {
+  to { -webkit-transform: rotate(1620deg); }
+}
+@keyframes spin5 {
+  to { transform: rotate(1830deg); }
+}
+@-webkit-keyframes spin5 {
+  to { -webkit-transform: rotate(1830deg); }
+}
+.hiEvent-M-1257 .rLayerPop{display:none; position:absolute; left:50%; top:29%; margin-left:-38%; width:76%; cursor:pointer; z-index:20;}
+.hiEvent-M-1257 .pop {display:none; position:absolute; left:50%; top:29%; margin-left:-38%; width:76%; cursor:pointer;}
+.hiEvent-M-1257 .evt_pop {display:none;position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;}
+.hiEvent-M-1257 .bg70{position:absolute;top:0;left:0;width:100%;height:100%;background:url("http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/bg70.png") repeat center 0}
+.hiEvent-M-1257 .layer_inner {position:absolute; top:50%; right:2%; left:2%; border:1px solid #093250; background:#fff;font-size:12px;box-shadow:1px 1px 2px #4f4f4f;-webkit-box-shadow:1px 1px 2px rgba(79,79,79,1);-moz-box-shadow:1px 1px 2px #4f4f4f; background:#fff;font-size:12px;}
+.hiEvent-M-1257 .pop_head {background:#eb1d8d;position:relative;}
+.hiEvent-M-1257 .pop_head .btn_close {position:absolute;right:0;top:0; width:9.8%;}
+.hiEvent-M-1257 .pop_cont {position:relative; overflow:auto; -webkit-overflow-scrolling:touch;}
+.hiEvent-M-1257 .cont_area {padding:15px 10px 0 10px; position:relative;}
+.hiEvent-M-1257 .cont_area .detail_name{color:#232a32;font-size:13px;line-height:18px;letter-spacing:-0.10em;}
+.hiEvent-M-1257 .cont_area .detail_name .name{color:#232a32;font-size:15px;line-height:15px;}
+.hiEvent-M-1257 .tbl_form table {margin-top:16px;color:#6a747c;}
+.hiEvent-M-1257 .tbl_form tbody th {background:#f5f5f5;color:#2a2a2a; border-top:1px solid #b4b4b4; font-weight:bold;}
+.hiEvent-M-1257 .tbl_form tbody td {border-bottom:1px solid #b4b4b4;}
+.hiEvent-M-1257 .tbl_form tbody th:first-child,.hiEvent-M-1257 .tbl_form tbody td:first-child {border-right:1px solid #b4b4b4;}
+.hiEvent-M-1257 .tbl_form tbody th, .hiEvent-M-1257 .tbl_form tbody td {padding:8px 10px; text-align:center;font-size:13px;}
+.hiEvent-M-1257 .txt_info {margin:10% 0 0 0;}
+.hiEvent-M-1257 .pop_bottom { position:relative;}
+.hiEvent-M-1257 .pop_confirm {width:49%;height:49%;position:absolute;left:25.5%;top:21%;}
+body.pop_active {overflow:hidden;}
+.hiEvent-M-1257 .layer_inner.over_size {top:5%; bottom:5%;}
+</style>
+<!-- //D:style -->
+<!-- D:script -->
+<script type="text/javascript">
+var ua = window.navigator.userAgent; 
+var circleIndex = 1; 
+var autoCircle; 
+var ieCircleAuto = false; 	
+function giftEnd(n){ $(".hiEvent-M-1257 .giftPop"+n).show(); }    
+function rouletteEnd(n){ 
+	if(ua.indexOf("MSIE 8.0") != -1){ 
+		$(".hiEvent-M-1257 #circleIE20151026").show(); 
+		ieCircleAuto = true; 
+		ieCircle(); 
+		setTimeout(function(){ieCircleEnd(n)},2000); 
+	}else if(ua.indexOf("MSIE 9.0") != -1){ 
+		$(".hiEvent-M-1257 #circleIE20151026").show(); 
+		ieCircleAuto = true; 
+		ieCircle(); 
+		setTimeout(function(){ieCircleEnd(n)},2000); 
+	}else{ 
+		$(".hiEvent-M-1257 #circle").removeClass("spin1").removeClass("spin2").removeClass("spin3").removeClass("spin4").removeClass("spin5"); 
+		$(".hiEvent-M-1257 #circle").addClass("spin"+n); setTimeout(function(){giftEnd(n)},3500); 
+	} 
+}    
+function circleLayerPopClose(){ 
+	$(".hiEvent-M-1257 .rLayerPop").hide(); 
+}    
+function amazingGift1(){
+	location.reload();
+	circleLayerPopClose();
+}    
+function amazingGift2(){
+	location.reload();
+	circleLayerPopClose();
+}    
+function amazingGift3(){
+	location.reload();
+	circleLayerPopClose();
+}    
+function amazingGift4(){
+	location.reload();
+	circleLayerPopClose();
+}
+function amazingGift5(){
+	location.reload();
+	circleLayerPopClose();
+}
+
+$(function(){
+	$(".hiEvent-M-1257 .btn_view").click(function(){
+		$(".hiEvent-M-1257 .evt_pop").show();
+		$('body').addClass('pop_active');
+		var total = $('.hiEvent-M-1257 .pop_head').outerHeight() + $('.hiEvent-M-1257 .cont_area').outerHeight();
+		pop_sizing(total, $('.hiEvent-M-1257 .layer_inner'), $('.hiEvent-M-1257 .pop_head'), $('.hiEvent-M-1257 .pop_cont'));		
+	});
+
+	$(window).on('resize', function(){
+		var total = $('.hiEvent-M-1257 .pop_head').outerHeight() + $('.hiEvent-M-1257 .cont_area').outerHeight();
+		pop_sizing(total, $('.hiEvent-M-1257 .layer_inner'), $('.hiEvent-M-1257 .pop_head'), $('.hiEvent-M-1257 .pop_cont'));
+	});
+
+	$(".hiEvent-M-1257 .btn_close").click(function(){
+		$(".hiEvent-M-1257 .evt_pop").hide();
+		$('body').removeClass('pop_active');
+	});
+	$(".hiEvent-M-1257 .pop_confirm").click(function(){
+		$(".hiEvent-M-1257 .evt_pop").hide();
+		$('body').removeClass('pop_active');
+	});
+});
+function pop_sizing(total, Wrap, Except, scrollTarget){
+	if (total >= $(window).height())
+	{
+		Wrap.addClass('over_size');
+		Wrap.css({
+			marginTop:0
+		});
+		scrollTarget.height(Wrap.height() - Except.outerHeight());
+	} else {
+		Wrap.removeClass('over_size');
+		scrollTarget.css({
+			height:'auto'
+		});
+		Wrap.css({
+			marginTop:-(Wrap.height() / 2)
+		});
+	}
+}
+</script>
+<!-- //D:script -->
+
 </head>
 <body>
-	teststetetet
+
+<div id="wrap">
+	<div id="header">
+		<div class="categoryHeader">
+			<ul class="categoryTop abClear" id="commonCate">
+				<li><a href="javascript:goEventMain();" class="goBack"><img src="http://mstatic1.e-himart.co.kr/resources/layout/images/btn/btn_dpyMenu01.png" alt="뒤로"></a></li>
+				<li><span class="categoryName" id="headMenuNm">이벤트 목록</span></li>
+				<li>
+					<a href="http://m.e-himart.co.kr/app/display/main" class="goHp"><img src="http://mstatic1.e-himart.co.kr/resources/layout/images/btn/btn_dpyMenu05.png" alt="홈으로"></a>
+					<a href="javascript:mypageMainGo();" class="goMp"><img src="http://mstatic2.e-himart.co.kr/resources/layout/images/btn/btn_dpyMenu03.png" alt="마이페이지"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="container">
+		<div id="content" style="padding-top: 50px;">
+			<div class="myEvt">
+				
+				<!-- D: 테스트를 위한 임시 버튼, 실제로 올리실땐 지워주세요 -->
+				<div style="width:100%; margin:10px 0; text-align:center; font-size:14px">		
+					<p style="margin-bottom:5px;"><strong>[테스트를 위한 임시버튼]</strong></p>
+					<a href="javascript:rouletteEnd(1);">L.POINT 10점</a><br>
+					<a href="javascript:rouletteEnd(2);">L.POINT 100점</a><br>
+					<a href="javascript:rouletteEnd(3);">1만원쿠폰</a><br>
+					<a href="javascript:rouletteEnd(4);">롯데리아 햄버거</a><br>
+					<a href="javascript:rouletteEnd(5);">세븐일레븐 5천원권</a></div>
+				</div>
+				<!-- //D: 테스트를 위한 임시 버튼, 실제로 올리실땐 지워주세요 -->				
+				
+				<!-- D:룰렛 이벤트 영역 -->
+				<div class="hiEvent-M-1257">
+					<div class="inner">
+						<img class="bg_rullet" src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/bg_roulette.jpg" alt="행운의 룰렛 배경" />
+						<div id="circleArea">
+							<div class="circleArea">
+								<div id="circle">
+									<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/img_roulette.png" alt="룰렛판" />
+								</div>
+							</div>
+						</div>
+						<div class="circleArr">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/img_pin.png" alt="100%당첨" />
+						</div>
+						<a class="circleStart" href="javascript:rouletteStart();">
+							<img alt="START" src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/btn_start.png">
+						</a>
+						<a href="javascript:;" class="btn_view"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/btn_view.png" alt="당첨내역보기" /></a>
+					</div>
+					<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/img_info.jpg" alt="유의사항" />
+					
+					<!-- L.POINT 10점 -->
+					<div class="rLayerPop giftPop1">
+						<div class="giftTop">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift01.png" alt="축하합니다. 당첨되셨습니다. L.POINT 10점" />
+						</div>
+						<a class="giftBtn" href="javascript:amazingGift1();">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift_ok.png" alt="확인" />
+						</a>
+					</div>
+					<!-- //L.POINT 10점 -->
+					<!-- L.POINT 100점 -->
+					<div class="rLayerPop giftPop2">
+						<div class="giftTop">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift02.png" alt="축하합니다. 당첨되셨습니다. L.POINT 100점" />
+						</div>
+						<a class="giftBtn" href="javascript:amazingGift2();">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift_ok.png" alt="확인" />
+						</a>
+					</div>
+					<!-- //L.POINT 100점 -->
+					<!-- 1만원쿠폰 -->
+					<div class="rLayerPop giftPop3">
+						<div class="giftTop">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift03.png" alt="축하합니다. 당첨되셨습니다. 1만원쿠폰" />
+						</div>
+						<a class="giftBtn" href="javascript:amazingGift3();">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift_ok.png" alt="확인" />
+						</a>
+					</div>
+					<!-- //1만원쿠폰 -->
+					<!-- 롯데리아햄버거 -->
+					<div class="rLayerPop giftPop4">
+						<div class="giftTop">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift04.png" alt="축하합니다. 당첨되셨습니다. 롯데리아햄버거" />
+						</div>
+						<a class="giftBtn" href="javascript:amazingGift4();">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift_ok.png" alt="확인" />
+						</a>
+					</div>
+					<!-- //롯데리아햄버거 -->
+					<!-- 세븐일레븐 5천원권 -->
+					<div class="rLayerPop giftPop5">
+						<div class="giftTop">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift05.png" alt="축하합니다. 당첨되셨습니다. 세븐일레븐 5천원권" />
+						</div>
+						<a class="giftBtn" href="javascript:amazingGift5();">
+							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/gift_ok.png" alt="확인" />
+						</a>
+					</div>
+					<!-- //세븐일레븐 5천원권 -->
+					<!-- D:이벤트 당첨 내역 팝업 -->
+					<div class="evt_pop">
+						<div class="bg70">&nbsp;</div>
+						<div class="layer_inner">
+							<div class="pop_head">
+								<h1><img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/img_tit.jpg" alt="이벤트 당첨 내역" /></h1>
+								<a href="javascript:;" class="btn_close"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/btn_close.jpg" alt="닫기" /></a>
+							</div>
+							<div class="pop_cont">
+								<div class="cont_area">
+									<div class="detail_name"><strong class="name">홍길동</strong> 님 이벤트 당첨내역</div>
+									<div class="tbl_form">							
+										<table>
+											<colgroup>
+												<col width="45%" />
+												<col width="" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>참여일시</th>
+													<th>당첨내역</th>
+												</tr>
+												<!-- D : 하루 한번, 최대 7개까지 당첨 -->
+												<tr>
+													<td>
+														<div class="date">2017-02-13 16:24:20</div>
+													</td>
+													<td>
+														<div class="prd_name">L.POINT 100점</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="txt_info">
+										<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/img_pop_info.jpg" alt="꼭 확인해주세요" />
+									</div>
+
+									<div class="pop_bottom">
+										<img src="http://www.e-himart.co.kr/contents/content/upload/event/1257/MC/btn_confirm.jpg"><a class="pop_confirm" href="javascript:;"><span class="blind">확인</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //D:이벤트 당첨 내역 팝업 -->
+				</div>
+				<!-- //D:룰렛 이벤트 영역 -->
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
