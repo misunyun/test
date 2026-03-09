@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="kr">
 <head>
@@ -6,544 +5,419 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=high-dpi">
-<title>[MC]온라인경매</title>
+<title>[MC] 11월홀릭위크</title>
 <script src="http://static2.e-himart.co.kr/resources/layout/js/jquery-1.11.2.min.js"></script>
 <script src="http://static2.e-himart.co.kr/resources/layout/js/jquery.easing.1.3.js"></script>
 <link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/common.css" />
 <link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/base.css" />
 <link type="text/css" rel="stylesheet" href="http://mstatic1.e-himart.co.kr/resources/layout/css/layout.css" />
 
-<!-- style -->
 <style type="text/css">
-*{margin:0; padding:0; list-style:none;}
-.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
-.hiEvent-M-1124 {position:relative;}
-.hiEvent-M-1124 img {width:100%; vertical-align:top;}
-.hiEvent-M-1124 .eA {position:relative;}
-.hiEvent-M-1124 .w2 {background:#333837;}
-.hiEvent-M-1124 .w3 {padding:0 0 5% 0;background:#eaeae2;}
-.hiEvent-M-1124 .btn_zone {padding:0 0 5% 0;}
-.hiEvent-M-1124 .prd_cont {width:91%; margin:0 auto; padding:0 0 4% 0; background:#dbdccc;}
-.hiEvent-M-1124 .recent_zone {width:73%; margin:0 auto 4% auto; padding:0 0 2% 0;text-align:center; border-bottom:1px solid #a5a69e;}
-.hiEvent-M-1124 .recent_zone * {vertical-align:middle;}
-.hiEvent-M-1124 .recent_zone span img{width:38%;}
-.hiEvent-M-1124 .recent_zone em img{width:5.2%;}
-.hiEvent-M-1124 .recent_num {padding:0 0 0 2px;color:#01ae9b;font-family:"MontB"; font-size:1.6em;}
-.hiEvent-M-1124 .price_zone {position:relative; width:100%; margin:0 auto;}
-.hiEvent-M-1124 .input_zone {width:73%; margin:0 auto;}
-.hiEvent-M-1124 .input_zone .inputs {position:absolute; top:0; width:8.8%; height:100%; border-radius:4px; background:none; border:none; text-align:center; color:#fff; -webkit-text-fill-color:#fff; font-size:1.6em; font-family:"MontB"; font-weight:bold;}
-.hiEvent-M-1124 .input_zone .ipt1{left:13.5%;}
-.hiEvent-M-1124 .input_zone .ipt2{left:24.5%;}
-.hiEvent-M-1124 .input_zone .ipt3{left:33.7%;}
-.hiEvent-M-1124 .input_zone .ipt4{left:43%;}
-.hiEvent-M-1124 .input_zone .ipt5{left:54%;}
-.hiEvent-M-1124 .input_zone .ipt6{left:63.2%;}
-.hiEvent-M-1124 .input_zone .ipt7{left:72.5%;}
-.hiEvent-M-1124 .btn_buy {display:block; margin:4% 0 0 0;}
-.hiEvent-M-1124 .popup {display:none;position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;}
-.hiEvent-M-1124 .bg70{position:absolute;top:0;left:0;width:100%;height:100%;background:url("http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_bg70.png") repeat center 0}
-.hiEvent-M-1124 .layer_inner {position:absolute; top:50%; right:2%; left:2%; border:2px solid #f51e1c; background:#fff;font-size:12px;}
-body.pop_active {overflow:hidden;}
-.hiEvent-M-1124 .layer_inner.over_size {top:5%; bottom:5%;}
-.hiEvent-M-1124 .pop_head {height:45px;background:#f51e1c;position:relative;}
-.hiEvent-M-1124 .pop_head h1{padding:0 10px;font-size:16px;color:#fff;line-height:45px;}
-.hiEvent-M-1124 .btn_close {position:absolute;right:15px;top:15px;width:15px;height:15px;}
-.hiEvent-M-1124 .pop_cont {position:relative;overflow-y:auto;-webkit-overflow-scrolling:touch;}
-.hiEvent-M-1124 .cont_area {padding:15px;}
-.hiEvent-M-1124 .cont_area .detail_name{margin-bottom:10px;font-size:16px;color:#6a747d;}
-.hiEvent-M-1124 .cont_area .detail_name .name{font-size:16px;color:#232a32;font-weight:normal;letter-spacing:-0.10em;}/*20170207 letter-spacing 추가*/
-.hiEvent-M-1124 .tbl_form {border-bottom:1px solid #555;}
-.hiEvent-M-1124 .tbl_form tbody th {background:#f3f3f3; border-top:1px solid #d3d3d5; font-size:14px;color:#232a32; letter-spacing:-0.10em;}
-.hiEvent-M-1124 .tbl_form tbody tr:first-child th,.hiEvent-M-1124 .tbl_form tbody tr:first-child td {border-top:1px solid #555;}
-.hiEvent-M-1124 .tbl_form th,.hiEvent-M-1124 .cont_area td {padding:10px;text-align:center;line-height:18px;}
-.hiEvent-M-1124 .tbl_form td {border-left:1px solid #d3d3d5; border-top:1px solid #d3d3d5;color:#6a747d;font-size:12px;}
-.hiEvent-M-1124 .tbl_form td:first-child {border-left:0;}
-.hiEvent-M-1124 .tbl_form.type01 thead th {padding:7px 10px;background:#f5f5f5;border-top:1px solid #555;text-align:left;font-weight:bold;letter-spacing:-0.10em;}
-.hiEvent-M-1124 .tbl_form.type01 .borT {border-top:none !important;}
-.hiEvent-M-1124 .tbl_form.type01 tbody td {text-align:left;color:#2c2d32;line-height:15px;letter-spacing:-0.10em;}
-.hiEvent-M-1124 .tbl_form.type01 tbody td p {padding-left:7px; text-indent:-7px;}
-.hiEvent-M-1124 .tbl_form.type01 .list_type01 {margin:7px 5px;}
-.hiEvent-M-1124 .tbl_form.type01 .list_type01 li {padding-left:7px; text-indent:-7px;}
-.hiEvent-M-1124 .tbl_form.type01 .agree_tbl {margin-top:8px;}
-.hiEvent-M-1124 .tbl_form.type01 .agree_tbl th,.hiEvent-M-1124 .tbl_form.type01 .agree_tbl td {padding:3px 0;color:#6a747c;font-size:12px;border:1px solid #d3d3d5;text-align:center;font-weight:normal;}
-.hiEvent-M-1124 .detail_img img {width:70%;margin:0 auto;border:1px solid #ebebeb;}
-.hiEvent-M-1124 .price_area .price {color:#ff0000; font-size:16px; font-family:"MontB";}
-.hiEvent-M-1124 .pop_bottom {margin-top:15px; text-align:center;}
-.hiEvent-M-1124 .pop_bottom .btn_type {display:block;}
-.hiEvent-M-1124 .pop_bottom .btn_type img {width:38%;}
-.hiEvent-M-1124 .check_txt {margin-bottom:10px;padding-left:7px;text-indent:-7px;}
-.hiEvent-M-1124 .agree_check {position:relative;}
-.hiEvent-M-1124 .agree_check .agChk{position:absolute;top:0;left:0;}
-.hiEvent-M-1124 .input_zone ::-webkit-input-placeholder {color:#d3d3d3;-webkit-text-fill-color:#d3d3d3;transition:opacity 250ms ease-in-out;}
-.hiEvent-M-1124 .input_zone :focus::-webkit-input-placeholder {opacity:0.5;}
-.hiEvent-M-1124 .input_zone :-ms-input-placeholder {color:#d3d3d3;-webkit-text-fill-color:#d3d3d3;transition:opacity 250ms ease-in-out;}
-.hiEvent-M-1124 .input_zone :focus:-ms-input-placeholder {opacity:0.5;}
-.hiEvent-M-1124 .input_zone ::-moz-placeholder {color:#d3d3d3; -webkit-text-fill-color:#d3d3d3; opacity:1; transition:opacity 250ms ease-in-out;}
-.hiEvent-M-1124 .input_zone :focus::-moz-placeholder {opacity:0.5;}
-.hiEvent-M-1124 .input_zone :-moz-placeholder {color:#d3d3d3;-webkit-text-fill-color:#d3d3d3;opacity:1;transition: opacity 250ms ease-in-out;}
-.hiEvent-M-1124 .input_zone :focus:-moz-placeholder {opacity:0.5;}
+.hiEvent-M-1754{position:relative;}
+.hiEvent-M-1754 a{display:block;}
+.hiEvent-M-1754 img{width:100%; vertical-align:top;}
+.hiEvent-M-1754 ul:after{display:block; clear:both; content:"";}
+.hiEvent-M-1754 .sec_visual {position:relative; background:#0b083d url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual.jpg") 0 0 no-repeat; background-size:100% 100%;}
+.hiEvent-M-1754 .sec_visual span[class^="i_"] {display:block; position:absolute; top:0; left:0; width:100%; height:100%; background-position:0 0; background-repeat:no-repeat; background-size:100% 100%; opacity:0;}
+.hiEvent-M-1754 .i_amazing {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_amazing.jpg"); z-index:2;}
+.hiEvent-M-1754 .i_10 {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_10.jpg"); z-index:3;}
+.hiEvent-M-1754 .i_days {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_days.jpg"); z-index:4;}
+.hiEvent-M-1754 .i_full {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_full.jpg"); z-index:5;}
+.hiEvent-M-1754 .i_star {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_star.jpg"); z-index:6;}
+.hiEvent-M-1754 .i_normal {background-image:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual.jpg"); z-index:7;}
+.hiEvent-M-1754 .sec_visual .inner {position:absolute; left:0; top:57.5%; width:100%; height:39%; z-index:999;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet {position:relative; width:100%; height:100%; }
+.hiEvent-M-1754 .sec_visual .inner .btnSet a {display:block; position:absolute; font-size:0;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet a.btnCard {left:2.2%; top:0%; width:46.8%; height:69%;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet a.btnShow {right:2.2%; top:0%; width:46.8%; height:69%;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet a.btnOne {left:2.2%; top:72%; width:31%; height:27%;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet a.btnCoupon{left:34.5%; top:72%; width:31%; height:27%;}
+.hiEvent-M-1754 .sec_visual .inner .btnSet a.btnBanner02{right:2.2%; top:72%; width:31%; height:27%;}
+.hiEvent-M-1754 .sec_card li div{display:none;}
+.hiEvent-M-1754 .event_coupon {padding-bottom:7%;background:#ebebeb;}
+.hiEvent-M-1754 .event_coupon .h_coupon + img {display:none;}
+.hiEvent-M-1754 .sec_oneday {padding-bottom:7%;background:#4f3d87;}
+.hiEvent-M-1754 .onedayPrd {position:relative; width:100%; height:100%;}
+.hiEvent-M-1754 .onedayPrd ul {width:98%; margin:0 auto;}
+.hiEvent-M-1754 .onedayPrd ul:after{clear:both;display:block;content:"";}
+.hiEvent-M-1754 .onedayPrd li {position:relative; float:left; width:48.6%; margin:1.9% 0.7% 0 0.7%;}
+.hiEvent-M-1754 .onedayPrd li.onedayItem01,.hiEvent-M-1754 .onedayPrd li.onedayItem02 {margin-top:0;}
+.hiEvent-M-1754 .onedayPrd .soldout {position:absolute; left:0%; top:0%; width:100%;height:100%; z-index:10;}
+.hiEvent-M-1754 .onedayPrd .discount_area {position:absolute; right:0%; top:67%; width:30%; height:14%; background:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_discount.png") 0 0 no-repeat; background-size:100%; font-weight:bold; color:#fff; text-align:center;}/*montB빼고 bold추가*/
+.hiEvent-M-1754 .onedayPrd .discount_area .discount {display:inline-block; padding:12% 0 0 16%;font-size:40px; vertical-align:middle; letter-spacing:-0.05em;}/*letter-spacing추가*/
+@media screen and (max-width:1280px) {
+	.hiEvent-M-1754 .onedayPrd .discount_area .discount {padding:12% 0 0 16%;font-size:40px;}
+}
+@media screen and (max-width:800px) {
+	.hiEvent-M-1754 .onedayPrd .discount_area .discount {padding:12% 0 0 16%;font-size:32px;}/*padding수정*/
+}
+@media screen and (max-width:480px) {
+	.hiEvent-M-1754 .onedayPrd .discount_area .discount {padding:12% 0 0 16%;font-size:20px;}/*padding수정*/
+}
+@media screen and (max-width:360px) {
+	.hiEvent-M-1754 .onedayPrd .discount_area .discount {padding:10% 0 0 16%;font-size:16px;}/*padding수정*/
+}
+@media screen and (max-width:320px) {
+	.hiEvent-M-1754 .onedayPrd .discount_area .discount {padding:6% 0 0 16%;font-size:16px;}
+}
+.hiEvent-M-1754 .onedayPrd .prd_btn01 {position:absolute; left:4%; bottom:2.6%; width:92%; height:13.6%;}
+.hiEvent-M-1754 .onedayPrd .prd_btn02 {position:absolute; left:4%; bottom:2.6%; width:92%; height:13.6%; z-index:20;}
+.hiEvent-M-1754 .sec_oneday .dim_open {position:absolute; left:1.5%; top:0; width:97%; z-index:30;}
+.hiEvent-M-1754 .onedayPrd .price_area {position:absolute;left:8%;top:67%;font-weight:bold;}/*montB, letter-spacing빼고 bold추가*/
+.hiEvent-M-1754 .onedayPrd .sell_price {display:block;color:#202020;font-size:15px;font-weight:bold;text-decoration:line-through;}
+.hiEvent-M-1754 .onedayPrd .sale_price {display:block;margin-top:-3%;color:#f63c3d;font-size:21px;font-weight:bold;}/*margin-top수정*/
+@media screen and (max-width:360px) {.hiEvent-M-1754 .onedayPrd .sell_price {font-size:13px}.hiEvent-M-1754 .onedayPrd .sale_price {font-size:16px}}
+@media screen and (min-width:600px) {.hiEvent-M-1754 .onedayPrd .sell_price {font-size:20px}.hiEvent-M-1754 .onedayPrd .sale_price {font-size:34px}}
+.hiEvent-M-1754 .sec_prd {background:#f7f7f7;}
+.hiEvent-M-1754 .sec_prd ul:after{display:block; clear:both; content:"";}
+.hiEvent-M-1754 .sec_prd .goods li{position:relative;float:left; width:50%;}
+.hiEvent-M-1754 .sec_exhibition {position:relative; padding:0 0 6%; background:#3c1780;}
+.hiEvent-M-1754 .sec_exhibition li {padding-bottom:2.2%;}
+.hiEvent-M-1754 .sec_prd .goods .price_area {width:48%;height:18%;text-align:right;font-weight:bold;}/*montB,letter-spacing뺌*/
+.hiEvent-M-1754 .goods .holic_price {display:block; position:absolute; right:8.4%; width:100%;height:10%;color:#000;}
+.hiEvent-M-1754 .goods .total_price {display:block; position:absolute; right:8.4%; width:100%;height:10%;color:#fff;}
+.hiEvent-M-1754 .sec_prd .goods_banner li {position:relative;}
+.hiEvent-M-1754 .sec_prd .goods_banner .price_group {display:table; position:absolute; left:40%; top:69%; width:59%; height:40%; color:#f11219;}/*letter-spacing뺌*/
+.hiEvent-M-1754 .sec_prd .goods_banner li:nth-child(3) .price_group {top:75%; left:40.5%;}
+.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area {display:table-cell; width:25%;}
+.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {display:inline-block; width:100%; padding:8% 0 26% 0%; font-size:20px; background:url("http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_discount_gb.png") 0 0 no-repeat; background-size:100%; vertical-align:middle;font-weight:bold; color:#fff; text-align:center;}/*montB뺌*/
+.hiEvent-M-1754 .sec_prd .goods_banner li:nth-child(1) .price_group .price_area {padding-left:2.5%}
+.hiEvent-M-1754 .sec_prd .goods_banner li:nth-child(2) .price_group .price_area {padding-left:2.5%;}
+.hiEvent-M-1754 .sec_prd .goods_banner .price_group .price_area {display:table-cell; width:75%; padding-top:3%; padding-left:2.5%;}
+.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-weight:bold; text-align:left; font-size:21px;}/*montB, letter-spacing뺌*/
+.hiEvent-M-1754 .sec_prd .price_group .none {display:none !important;}
+@media screen and (max-width:1366px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:80%; font-size:44px;line-height:2;}
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.5%; font-size:55px;line-height:1;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:15% 0 26% 0%; font-size:45px;}/*padding, font수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:60px;}
+}
+@media screen and (max-width:1280px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:80.2%; font-size:35px;line-height:2;}
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.4%; font-size:44px;line-height:1;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:14% 0 26% 0%; font-size:36px;}/*padding수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:48px;}
+}
+@media screen and (max-width:800px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:79.7%; font-size:25px;line-height:2;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.5%; font-size:30px;line-height:1;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:16% 0 26% 0%; font-size:26px;}/*padding수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:33px;}
+}
+@media screen and (max-width:640px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:79.4%; font-size:24px;line-height:2;}
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.4%; font-size:27px;line-height:1;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:12% 0 26% 0%; font-size:24px;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:28px;}
+}
+@media screen and (max-width:480px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:78.9%; font-size:16px;line-height:2;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.2%; font-size:19px;line-height:1;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .discount {font-size:20px;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:9% 0 26% 0%; font-size:19px;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:20px;}
+}
+@media screen and (max-width:385px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:78.8%; font-size:15px;}
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89.1%; font-size:17px;}/*top수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {padding:9% 0 26% 0%; font-size:16px;}/*padding수정*/
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:18px;}
+}
+@media screen and (max-width:320px) {
+	.hiEvent-M-1754 .sec_prd .goods .holic_price {top:78.2%; font-size:14px;}
+	.hiEvent-M-1754 .sec_prd .goods .total_price {top:89%; font-size:16px;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .discount_area .discount {font-size:14px;}
+	.hiEvent-M-1754 .sec_prd .goods_banner .price_group .holic_price {font-size:16px;}
+}
+.hiEvent-M-1754 .sec_show {background:#d2121d;}
+.hiEvent-M-1754 .product_list img {margin-bottom:4.5%;}
+.hiEvent-M-1754 .banner_list {padding-bottom:4%;}
 </style>
-<!-- //style -->
-<!-- script -->
 <script type="text/javascript">
-function close_pop(){		
-	$(".hiEvent-M-1124 .popup").hide();
-}
-function pop_detail(){
-	$(".hiEvent-M-1124 .popup.privacy").hide();
-	$(".hiEvent-M-1124 .popup.detail").show();
-	$("body").addClass("pop_active");
-	var total = $(".hiEvent-M-1124 .popup.detail .pop_head").outerHeight() + $(".hiEvent-M-1124 .popup.detail .cont_area").outerHeight();
-	pop_sizing(total, $(".hiEvent-M-1124 .popup.detail .layer_inner"), $(".hiEvent-M-1124 .popup.detail .pop_head"), $(".hiEvent-M-1124 .popup.detail .pop_cont"));
-	$(".hiEvent-M-1124 .popup.detail .layer_inner .btn_close").click(function(){
-		$(".hiEvent-M-1124 .popup").hide();
-	});
-}
-function pop_privacy(){		
-	$(".hiEvent-M-1124 .popup.privacy").show();
-	$(".hiEvent-M-1124 .popup.detail").hide();
-	$("body").addClass("pop_active");
-	var total = $(".hiEvent-M-1124 .popup.privacy .pop_head").outerHeight() + $(".hiEvent-M-1124 .popup.privacy .cont_area").outerHeight();
-	pop_sizing(total, $(".hiEvent-M-1124 .popup.privacy .layer_inner"), $(".hiEvent-M-1124 .popup.privacy .pop_head"), $(".hiEvent-M-1124 .popup.privacy .pop_cont"));
-	$(".hiEvent-M-1124 .popup.privacy .layer_inner .btn_close").click(function(){
-		$(".hiEvent-M-1124 .popup").hide();
-	});
-}	
-function onlyNumber(event){
-	$(".hiEvent-M-1124 .inputs").keydown(function(e) {
-		var charLimit = $(this).attr("maxlength");
-		var keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
-		if (e.which == 8 && this.value.length == 0) {
-		} else if ($.inArray(e.which, keys) >= 0) {
-			return true;
-		} else if (this.value.length >= charLimit) {
-			return false;
-		} else if (e.shiftKey || e.which <= 47 || e.which >= 106) {
-			return false;
-		} else if (e.shiftKey || (e.which >= 58 && e.which <= 95)) {
-			return false;
+/* visual_animation */
+function visualMove(){
+	$(".hiEvent-M-1754 .i_amazing").animate({opacity:"0"}).animate({opacity:"1"}, {
+		easing:"swing",
+		duration:100,
+		complete:function(){
+			$(".hiEvent-M-1754 .i_10").animate({opacity:"0"}).animate({opacity:"1"}, {
+				easing:"swing",
+				duration:100,
+				complete:function(){
+					$(".hiEvent-M-1754 .i_days").animate({opacity:"0"}).animate({opacity:"1"}, {
+						easing:"swing",
+						duration:100,
+						complete:function(){
+							$(".hiEvent-M-1754 .i_full").animate({opacity:"0"}).animate({opacity:"1"}, {
+								easing:"swing",
+								duration:400,
+								complete:function(){
+									$(".hiEvent-M-1754 .i_star").animate({opacity:"0"}).animate({opacity:"0.8"}).animate({opacity:"0"}).animate({opacity:"1"}).animate({opacity:"0"}).animate({opacity:"0.8"}).animate({opacity:"0"}, {
+										easing:"swing",
+										duration:200,
+										complete:function(){
+											$(".hiEvent-M-1754 .i_normal").animate({opacity:"0"}).animate({opacity:"1"}, {
+												easing:"swing",
+												duration:700,
+												complete:function(){
+													$(".hiEvent-M-1754 .i_normal").delay(100).animate({opacity:"1"}, {
+														easing:"linear",
+														complete:function(){
+															$(".hiEvent-M-1754 .i_amazing").removeAttr("style");
+															$(".hiEvent-M-1754 .i_10").removeAttr("style");
+															$(".hiEvent-M-1754 .i_days").removeAttr("style");
+															$(".hiEvent-M-1754 .i_full").removeAttr("style");
+															$(".hiEvent-M-1754 .i_star").removeAttr("style");
+															$(".hiEvent-M-1754 .i_normal").removeAttr("style");
+															visualMove();
+														}
+													});
+												}
+											});
+										}
+									});
+								}
+							});
+						}
+					});
+				}
+			});
 		}
-	})
-}	
-function nextBlank(N, Obj, nextID) { 
-	if(document.getElementById(Obj).value.length == N) { 
-		document.getElementById(nextID).focus(); 
-	} 
+	});
 }
-$(window).on("resize", function(){
-	var total = $(".hiEvent-M-1124 .popup.privacy .pop_head").outerHeight() + $(".hiEvent-M-1124 .popup.privacy .cont_area").outerHeight();
-	pop_sizing(total, $(".hiEvent-M-1124 .popup.privacy .layer_inner"), $(".hiEvent-M-1124 .popup.privacy .pop_head"), $(".hiEvent-M-1124 .popup.privacy .pop_cont"));
-});
-$(window).on("resize", function(){
-	var total = $(".hiEvent-M-1124 .popup.detail .pop_head").outerHeight() + $(".hiEvent-M-1124 .popup.detail .cont_area").outerHeight();
-	pop_sizing(total, $(".hiEvent-M-1124 .popup.detail .layer_inner"), $(".hiEvent-M-1124 .popup.detail .pop_head"), $(".hiEvent-M-1124 .popup.detail .pop_cont"));
-});
-function btn_close(){
-	$("body").removeClass("pop_active");
-}
-function pop_sizing(total, Wrap, Except, scrollTarget){
-	if (total >= $(window).height())
-	{
-		Wrap.addClass("over_size");
-		Wrap.css({
-			marginTop:0
-		});
-		scrollTarget.height(Wrap.height() - Except.outerHeight());
-	} else {
-		Wrap.removeClass("over_size");
-		scrollTarget.css({
-			height:"auto"
-		});
-		Wrap.css({
-			marginTop:-(Wrap.height() / 2)
-		});
+/* //visual_animation */
+$(function(){
+	visualMove();
+	var urlHash = window.location.hash;
+	var flag;
+	var timer;
+	if ( urlHash ){
+		timer = setTimeout(function(){
+			console.log(  '---------------'  );
+			flag = setInterval(function(){
+				console.log(  $('.sec_prd').offset().top  );
+				console.log( (screen.width*4.45)+50 );
+				if ( $('.sec_prd').offset().top > (screen.width*4.45)+50 ) {
+					$("html, body").animate({scrollTop: $(urlHash).offset().top-50}, 500);
+					clearInterval(flag);
+				}
+			}, 100);
+		}, 1200);
 	}
-}
+	$(".hiEvent-M-1754 .infoCont div").hide();	
+	$(".hiEvent-M-1754 .a1").on("click",function(){
+		if($(this).hasClass("on")){
+			$(this).removeClass("on");
+			$(this).find("img").attr("src",$(this).find("img").attr("src").replace("on.jpg", ".jpg"));
+			$(this).next("div").hide();
+		}else{
+			$(this).addClass("on");
+			$(this).find("img").attr("src",$(this).find("img").attr("src").replace(".jpg", "on.jpg"));
+			$(this).next("div").show();
+		}
+	});
+	$(".hiEvent-M-1754 a[href*='#']:not([href='#'])").click(function() {
+		if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $("[name=' + this.hash.slice(1) +']");
+			if (target.length) {
+				$("html, body").animate({
+					scrollTop: target.offset().top-50
+				}, 500);
+				return false;
+			}
+		}
+	});
+});
 </script>
-<!-- //script -->
 </head>
+
 <body>
 
-<!-- html -->
-<div class="hiEvent-M-1124">
-	<div class="w1">
-		<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_omni01.jpg" alt="온라인경매" />
-	</div>
-	<div class="w2">
-		<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_omni02.jpg" alt="상품낙찰자 발표일 / 낙찰된상품 결제기한" />
-		<div class="btn_zone">
-			<a href="javascript:pop_detail();" class="btn_view"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_view.jpg" alt="나의 입찰 내역보기" /></a>
-		</div>
-	</div>
-	<div class="w3">
-		<div class="eA">
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num01.png" alt="1" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit01.jpg" alt="[LG전자] 울트라HD TV" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000075116"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd01.jpg" alt="[LG전자] 울트라HD TV 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="1" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="6" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd1_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd1_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num02.png" alt="2" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit02.jpg" alt="[LG전자] DIOS 양문형 냉장고" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000027839"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd02.jpg" alt="[LG전자] DIOS 양문형 냉장고 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">								
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="1" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd2_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd2_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num03.png" alt="3" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit03.jpg" alt="삼성전자 / 125cm FHD LED TV(스탠드형)" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000019194"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd03.jpg" alt="상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">								
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="6" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd3_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd3_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num04.png" alt="4" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit04.jpg" alt="[LG전자] 전기식 건조기(화이트)" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000074955"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd04.jpg" alt="[LG전자] 전기식 건조기(화이트) 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">								
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="9" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd4_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd4_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num05.png" alt="5" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit05.jpg" alt="[대유위니아] 딤채 스탠드 김치냉장고" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000030169"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd05.jpg" alt="[대유위니아] 딤채 스탠드 김치냉장고 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="1" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="5" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd5_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd5_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num06.png" alt="6" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit06.jpg" alt="[LG전자] 39.6cm 노트북 그램15" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000067277"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd06.jpg" alt="[LG전자] 39.6cm 노트북 그램15 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">								
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="6" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd6_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd6_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prd_zone">
-				<div class="prd_cont_w">
-					<span class="number"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_num07.png" alt="7" /></span>
-					<h2 class="prd_tit"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_tit07.jpg" alt="[바디프랜드] NEW PHANTOM 뉴팬텀" /></h2>
-					<div class="prd_cont">
-						<div class="prd_detail">
-							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000068270"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_prd07.jpg" alt="[바디프랜드] NEW PHANTOM 뉴팬텀 상품 자세히 보기" /></a>
-						</div>
-						<div class="total_data">
-							<div class="recent_zone">								
-								<span><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_recent.png" alt="현재 입찰 건 수" /></span>
-								<strong class="recent_num">10,000</strong>
-								<em><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_txt_num.png" alt="건" /></em>
-							</div>
-							<div class="price_zone">
-								<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_price.jpg" alt="" />
-								<div class="input_zone">
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt1" class="inputs ipt1" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt2')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="2" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt2" class="inputs ipt2" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt3')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="2" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt3" class="inputs ipt3" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt4')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt4" class="inputs ipt4" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt5')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="comma"><span class="blind">,</span></span>
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt5" class="inputs ipt5" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt6')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt6" class="inputs ipt6" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, 'prd7_ipt7')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="prd7_ipt7" class="inputs ipt7" size="1" maxlength="1" onkeyup="nextBlank(1, this.id, '')" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style='ime-mode:disabled;' placeholder="0" />
-									<span class="won"><span class="blind">원</span></span>
-								</div>
-							</div>
-							<a href="javascript:pop_privacy();" class="btn_buy"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_buy.jpg" alt="입찰응모하기" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
-	<div class="w4">
-		<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_omni03.jpg" alt="꼭 확인해주세요" />
-	</div>
 
-	<!-- 나의 입찰내역보기 팝업 -->
-	<div class="popup detail">
-		<div class="bg70">&nbsp;</div>
-		<div class="layer_inner">
-			<div class="pop_head">
-				<h1>나의 입찰내역보기</h1>
-				<a href="javascript:btn_close();" class="btn_close"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_close.png" alt="닫기" /></a>
+<div class="hiEvent-M-1754">
+	<div class="sec_visual">
+		<img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_visual_star.jpg" alt="">
+	</div>
+	<div class="sec_oneday" id="sec_oneday">
+		<div class="eA">
+			<div class="h_title"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_tit_oneday.jpg" alt="1DAY 초특가"></div>
+			<div class="onedayPrd">
+				<div class="dim_open" style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_dim_open.png" alt="12.11(월) AM 10시 오픈"></div>
+				<ul>
+					<li class="onedayItem01">
+							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000120012&amp;evtParam=12월어메이징1754" id="prd_link01"><!-- 20171207개선_a태그 추가, 여기에도 각 해당하는 상품링크 넣어주세요 -->
+								<img id="product01" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_oneday_goods03_1.jpg" alt=""><!-- D: 1일차 첫번째 상품 01_1, 2일차 첫번째 상품 02_1 순으로.. -->
+								<div class="discount_area">
+									<strong class="discount" id="oneDayDscnt01">25%</strong>
+								</div>
+								<div class="price_area">
+									<span class="sell_price" id="oneDayPrcOri1">56,000원</span>
+									<span class="sale_price" id="oneDayPrcSale1">41,900원</span>
+								</div>
+								</a><a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000120012&amp;evtParam=12월어메이징1754" class="prd_btn02" id="prd_btn01"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_btn_buy.jpg" alt="구매하기"></a>
+								<span class="soldout" id="soldout1" style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_icon_soldout.png" alt="Sold Out"></span><!-- D: 판매종료시 버튼과 함께 노출 -->
+							
+						</li>
+					<li class="onedayItem02">
+							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000200230&amp;evtParam=12월어메이징1754" id="prd_link02"><!-- 20171207개선_a태그 추가, 여기에도 각 해당하는 상품링크 넣어주세요 -->
+								<img id="product02" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_oneday_goods03_2.jpg" alt=""><!-- D: 1일차 첫번째 상품 01_1, 2일차 첫번째 상품 02_1 순으로.. -->
+								<div class="discount_area">
+									<strong class="discount" id="oneDayDscnt02">47%</strong>
+								</div>
+								<div class="price_area">
+									<span class="sell_price" id="oneDayPrcOri2">15,900원</span>
+									<span class="sale_price" id="oneDayPrcSale2">8,500원</span>
+								</div>
+								</a><a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000200230&amp;evtParam=12월어메이징1754" class="prd_btn02" id="prd_btn02"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_btn_buy.jpg" alt="구매하기"></a>
+								<span class="soldout" id="soldout2" style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_icon_soldout.png" alt="Sold Out"></span><!-- D: 판매종료시 버튼과 함께 노출 -->
+							
+						</li>
+					<li class="onedayItem03">
+							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000203427&amp;evtParam=12월어메이징1754" id="prd_link03"><!-- 20171207개선_a태그 추가, 여기에도 각 해당하는 상품링크 넣어주세요 -->
+								<img id="product03" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_oneday_goods03_3.jpg" alt=""><!-- D: 1일차 첫번째 상품 01_1, 2일차 첫번째 상품 02_1 순으로.. -->
+								<div class="discount_area">
+									<strong class="discount" id="oneDayDscnt03">31%</strong>
+								</div>
+								<div class="price_area">
+									<span class="sell_price" id="oneDayPrcOri3">12,900원</span>
+									<span class="sale_price" id="oneDayPrcSale3">8,900원</span>
+								</div>
+								</a><a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000203427&amp;evtParam=12월어메이징1754" class="prd_btn02" id="prd_btn03"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_btn_buy.jpg" alt="구매하기"></a>
+								<span class="soldout" id="soldout3" style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_icon_soldout.png" alt="Sold Out"></span><!-- D: 판매종료시 버튼과 함께 노출 -->
+							
+						</li>
+					<li class="onedayItem04">
+							<a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000162338&amp;evtParam=12월어메이징1754" id="prd_link04"><!-- 20171207개선_a태그 추가, 여기에도 각 해당하는 상품링크 넣어주세요 -->
+								<img id="product04" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_oneday_goods03_4.jpg" alt=""><!-- D: 1일차 첫번째 상품 01_1, 2일차 첫번째 상품 02_1 순으로.. -->
+								<div class="discount_area">
+									<strong class="discount" id="oneDayDscnt04">13%	</strong>
+								</div>
+								<div class="price_area">
+									<span class="sell_price" id="oneDayPrcOri4">1,199,000원</span>
+									<span class="sale_price" id="oneDayPrcSale4">1,039,000원</span>
+								</div>
+								</a><a href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000162338&amp;evtParam=12월어메이징1754" class="prd_btn02" id="prd_btn04"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_btn_buy.jpg" alt="구매하기"></a>
+								<span class="soldout" id="soldout4" style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_icon_soldout.png" alt="Sold Out"></span><!-- D: 판매종료시 버튼과 함께 노출 -->
+							
+						</li>
+					</ul>
 			</div>
-			<div class="pop_cont">
-				<div class="cont_area">
-					<div class="detail_name"><strong class="name">홍길동</strong>님의 이벤트 신청내역입니다.</div><!-- 20170207 문구수정 -->
-					<div class="tbl_form">
-						<table>
-							<colgroup>
-								<col width="45%" />
-								<col width="" />
-							</colgroup>
-							<tbody>
-								<tr>
-									<th>이벤트 참여 일시</th>
-									<td>
-										<div class="date">2017-02-10 16:24:20</div>
-									</td>
-								</tr>
-								<tr>
-									<th>응모한 입찰 상품</th>
-									<td>
-										<div class="detail_img"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_detail_img.jpg" alt="" /></div>
-									</td>
-								</tr>
-								<tr>
-									<th>응모한 입찰 가격</th>
-									<td>
-										<div class="price_area"><strong class="price">1,800,000</strong><span>원</span></div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="pop_bottom"><a href="javascript:;" class="btn_type"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_confirm.jpg" alt="확인" /></a></div>
-				</div>
+			<!-- D:[개발영역]브랜드 릴레이 배너 추가 -->
+		</div>
+		<div class="checkInfo">
+			<div class="infoCont">
+				<a class="a1" href="javascript:;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_btn_check01.jpg" alt="꼭 확인해 주세요 버튼"></a>
+				<div style="display: none;"><img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_info_oneday.jpg" alt="꼭 확인해주세요"></div>
 			</div>
 		</div>
-	</div>
-	<!-- //나의 입찰내역보기 팝업 -->
-	<!-- 개인정보수집동의 및 위탁동의 팝업 -->
-	<div class="popup privacy">
-		<div class="bg70">&nbsp;</div>
-		<div class="layer_inner">
-			<div class="pop_head">
-				<h1>개인정보수집동의 및 위탁동의</h1>
-				<a href="javascript:btn_close();" class="btn_close"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_close.png" alt="닫기" /></a>
-			</div>
-			<div class="pop_cont">
-				<div class="cont_area">
-					<div class="check_txt">* 개인정보수집동의 및 위탁동의 내용을 확인 후 동의 체크해 주셔야 이벤트 참여가 가능합니다.</div>
-					<div class="tbl_form type01">
-						<table class="tbl_cont">
-							<colgroup>
-								<col width="" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th>개인정보수집동의 및 위탁동의</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>									
-									<td class="borT">
-										<div class="agree_cont">
-											<p><span>*</span> 본인은 귀사가 아래와 같이 개인정보를 수집하고 이용함에 있어 충분히 내용을 확인하고 이에 동의 합니다.</p>
-											<ul class="list_type01">
-												<li>- 수집 항목: 성명, 휴대폰 번호</li>
-												<li>- 수집/이용 목적: 경품이벤트 기타 광고성 정보 전송 및 마케팅 활동</li>
-												<li>- 보유/이용 기간: 해당 마케팅 종료 후 6개월</li>
-											</ul>
-											<p>* 롯데하이마트가 서비스이행을 위하여 일부 개인정보를 제한적으로 외부전문업체에 위탁하여 운영함에 동의합니다.</p>
-										</div>
-										<div class="agree_tbl">
-											<table>
-												<colgroup>
-													<col width="" />
-													<col width="" />
-													<col width="" />
-													<col width="" />
-												</colgroup>
-												<thead>
-													<tr>
-														<th>위탁 업체명</th>
-														<th>위탁의 범위</th>
-														<th>공유되는 정보</th>
-														<th>보유 및 이용기간</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>MPC,<br/>한국고용정보</td>
-														<td>해피콜</td>
-														<td>성명, 연락처</td>
-														<td>해당 마케팅<br/>종료 후 6개월</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="pop_bottom">
-						<div class="agree_check">
-							<img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_agree.jpg" alt="개인정보 수집 약관에 동의하며 서비스 이행을 위하여 일부 개인정보를 제한적으로 외부전문업체에 위탁하여 운영함에 동의합니다.">
-							<input class="agChk" type="checkbox" value="on" />
-						</div>
-						<a href="javascript:;" class="btn_type"><img src="http://www.e-himart.co.kr/contents/content/upload/event/1124/MC/mo_btn_agree.jpg" alt="동의하기" /></a>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
-	<!-- //개인정보수집동의 및 위탁동의 팝업 -->
 </div>
-<!-- //html -->
+
+
+<div class="hiEvent-M-1754">
+<div class="sec_prd" id="sec_prd">
+	<div class="eA">
+		<div class="titArea">
+			<img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_tit_prd.jpg" alt="대표상품">
+		</div>
+		<ul class="goods">
+			<li>
+				<a id="mastLink1" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000202454&amp;evtParam=12월어메이징1754">
+					<img id="mastImg1" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g1.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price1"></span>
+						<span class="total_price" id="holic_total_price1">14,500원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink2" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000203438&amp;evtParam=12월어메이징1754">
+					<img id="mastImg2" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g2.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price2">44,900원</span>
+						<span class="total_price" id="holic_total_price2">31,900원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink3" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000174734&amp;evtParam=12월어메이징1754">
+					<img id="mastImg3" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g3.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price3">144,000원</span>
+						<span class="total_price" id="holic_total_price3">136,800원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink4" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000156943&amp;evtParam=12월어메이징1754">
+					<img id="mastImg4" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g4.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price4">149,000원</span>
+						<span class="total_price" id="holic_total_price4">131,550원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink5" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000167050&amp;evtParam=12월어메이징1754">
+					<img id="mastImg5" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g5.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price5">262,000원</span>
+						<span class="total_price" id="holic_total_price5">243,660원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink6" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000202593&amp;evtParam=12월어메이징1754">
+					<img id="mastImg6" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g6.jpg" alt="">
+					<div class="price_area">
+						<span class="holic_price" id="holic_price6">799,000원</span>
+						<span class="total_price" id="holic_total_price6">783,020원</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="goods_banner">
+			<li>
+				<a id="mastLink7" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000204645&amp;evtParam=12월어메이징1754">
+					<img id="mastImg7" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g_b1.jpg" alt="">
+					<!-- D: 20170913_묶음딜 수정 (price_group로 한번더 그룹핑, discount영역에 입력값이 없을때는 discount_area영역을 안보이게 hidden처리해주세요. (우선 소스상에선 임시로 none클래스추가해서 안보이게 처리함) -->
+					<div class="price_group">
+						<div class="discount_area" id="discount_area7"><strong class="discount" id="holic_price7">40%</strong></div>
+						<div class="price_area"><span class="holic_price" id="holic_total_price7">17,700원부터~</span></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink8" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000202779&amp;evtParam=12월어메이징1754">
+					<img id="mastImg8" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g_b2.jpg" alt="">
+					<!-- D: 20170913_묶음딜 수정 (price_group로 한번더 그룹핑, discount영역에 입력값이 없을때는 discount_area영역을 안보이게 hidden처리해주세요. (우선 소스상에선 임시로 none클래스추가해서 안보이게 처리함) -->
+					<div class="price_group">
+						<div class="discount_area" id="discount_area8"><strong class="discount" id="holic_price8">30%</strong></div>
+						<div class="price_area"><span class="holic_price" id="holic_total_price8">19,800원부터~</span></div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a id="mastLink9" href="http://m.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0000085745&amp;evtParam=12월어메이징1754">
+					<img id="mastImg9" src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_g_b3.jpg" alt="">
+					<!-- D: 20170913_묶음딜 수정 (price_group로 한번더 그룹핑, discount영역에 입력값이 없을때는 discount_area영역을 안보이게 hidden처리해주세요. (우선 소스상에선 임시로 none클래스추가해서 안보이게 처리함) -->
+					<div class="price_group">
+						<div class="discount_area" id="discount_area9"><strong class="discount" id="holic_price9">50%</strong></div>
+						<div class="price_area"><span class="holic_price" id="holic_total_price9">388,000원부터~</span></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="txt_prd">
+			<img src="http://mstatic1.e-himart.co.kr/contents/content/upload/event/1754/MC/mo_txt_prd.jpg" alt="">
+		</div>
+	</div>
+</div>
+</div>
+
+
 
 </body>
 </html>
